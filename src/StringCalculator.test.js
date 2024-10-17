@@ -19,3 +19,7 @@ test('returns the sum of multiple numbers separated by commas', () => {
 test('returns the sum when numbers are separated by commas and newlines', () => {
     expect(add("1\n2,3")).toBe(6);
 });
+
+test('returns the sum when numbers are separated by custom delimiters', () => {
+    expect(add("//;\n1;2")).toBe(3);
+});
