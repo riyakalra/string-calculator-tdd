@@ -1,6 +1,8 @@
 export function add(numbers) {
     if (numbers === "") return 0;
 
+    numbers = numbers.replace(/\\n/g, "\n");
+
     let delimiter = /,|\n/;
     if (numbers.startsWith("//")) {
         const parts = numbers.split("\n");
